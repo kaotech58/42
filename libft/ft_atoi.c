@@ -6,7 +6,7 @@ static int	determine_sign(const char **nptr);
 
 int	ft_atoi(const char *nptr)
 {
-	int		sign;
+	int	sign;
 	long	nbr;
 
 	remove_whitespaces(&nptr);

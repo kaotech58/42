@@ -10,7 +10,10 @@ SRCS				= ft_putchar.c \
 					  ft_isprint.c \
 					  ft_strlen.c \
 					  ft_memset.c \
+					  ft_memcpy.c \
+					  ft_memccpy.c \
 					  ft_bzero.c \
+					  ft_calloc.c \
 					  ft_strchr.c \
 					  ft_tolower.c \
 					  ft_toupper.c
