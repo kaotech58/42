@@ -9,6 +9,7 @@ SRCS				= ft_putchar.c \
 					  ft_isascii.c \
 					  ft_isprint.c \
 					  ft_strlen.c \
+					  ft_memchr.c \
 					  ft_memset.c \
 					  ft_memcpy.c \
 					  ft_memccpy.c \
