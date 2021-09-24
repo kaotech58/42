@@ -43,6 +43,8 @@ void	ft_putnbr(int n);
 
 void	ft_putnbr_fd(int n, int fd);
 
+int	ft_memcmp(const void *s1, const void *s2, size_t len);
+
 int	ft_isalpha(int c);
 
 int	ft_isdigit(int c);
@@ -55,15 +57,17 @@ int	ft_isprint(int c);
 
 size_t	ft_strlen(const char *s);
 
+void	*ft_memmove(void *dst, const void *src, size_t len);
+
 void	*ft_memchr(const void *s, int c, size_t len);
 
-void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memset(void *s, int c, size_t len);
 
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t len);
 
-void	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t len);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 
