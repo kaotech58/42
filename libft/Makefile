@@ -21,7 +21,20 @@ SRCS				= ft_putchar.c \
 					  ft_strrchr.c \
 					  ft_tolower.c \
 					  ft_toupper.c \
-					  ft_strncmp.c
+					  ft_strncmp.c \
+					  ft_strlcpy.c \
+					  ft_strlcat.c \
+					  ft_strnstr.c \
+					  ft_substr.c \
+					  ft_strdup.c \
+					  ft_itoa.c \
+					  ft_putendl_fd.c \
+					  ft_putstr_fd.c \
+					  ft_split.c \
+					  ft_strjoin.c \
+					  ft_strmapi.c \
+					  ft_strtrim.c \
+					  ft_striteri.c
 
 OBJS_DIR			= objs/
 OBJS				= $(SRCS:.c=.o)
