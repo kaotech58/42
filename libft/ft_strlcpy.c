@@ -2,12 +2,12 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	src_len;
+	size_t	len;
 
-	src_len = ft_strlen(src);
-	if (src_len < size)
+	len = ft_strlen(src);
+	if (len < size)
 	{
-		ft_memcpy(dst, src, src_len +1);
+		ft_memcpy(dst, src, len +1);
 	}
 	else if (size)
 	{

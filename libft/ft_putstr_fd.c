@@ -2,6 +2,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (s && *s)
+	while (*s)
+	{
 		ft_putchar_fd(*(s++), fd);
+	}
 }

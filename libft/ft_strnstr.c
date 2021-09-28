@@ -2,17 +2,21 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	l_len;
+	size_t	l_length;
 
-	l_len = ft_strlen(little);
-	if (!l_len)
+	l_length = ft_strlen(little);
+	if (!l_length)
+	{
 		return ((char *) big);
-	while (*big && len > l_len && ft_strncmp(big, little, l_len))
+	}
+	while (*big && len > l_length && ft_strncmp(big, little, l_length))
 	{
 		len--;
 		big++;
 	}
-	if (len >= l_len && !ft_strncmp(big, little, l_len))
+	if (len >= l_length && !ft_strncmp(big, little, l_length))
+	{
 		return ((char *) big);
+	}
 	return (NULL);
 }

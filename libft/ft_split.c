@@ -2,15 +2,12 @@
 
 static char			**ft_malloc_error(char **tab)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (tab[i])
+	while (*tab)
 	{
-		free(tab[i]);
-		i++;
+		free(*tab);
+		++tab;
 	}
-	free(tab);
+	free(*tab);
 	return (NULL);
 }
 
