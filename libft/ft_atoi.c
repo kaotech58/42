@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:38:45 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/28 13:38:49 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/09/28 13:54:02 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	determine_sign(const char **nptr);
 
 int	ft_atoi(const char *nptr)
 {
-	int	sign;
+	int		sign;
 	long	nbr;
 
 	remove_whitespaces(&nptr);

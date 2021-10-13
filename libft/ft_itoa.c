@@ -6,20 +6,20 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:37:42 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/28 13:38:04 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/13 14:23:14 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	determine_len(unsigned int n);
-static void	convert(unsigned int n, char *str, size_t len);
+static void		convert(unsigned int n, char *str, size_t len);
 
 char	*ft_itoa(int n)
 {
 	unsigned int	usn;
-	size_t		len;
-	char		*str;
+	size_t			len;
+	char			*str;
 
 	usn = n;
 	len = 0;

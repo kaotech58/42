@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:51:31 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/28 13:51:33 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/09/28 14:00:59 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size = len + 1;
 	sub = (char *)malloc(size * sizeof(char));
 	if (!s)
-	{
 		return (NULL);
-	}
 	if (start > s_length)
 	{
 		return (ft_strdup(""));
@@ -34,9 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = s_length - start;
 	}
 	if (!sub)
-	{
 		return (NULL);
-	}
 	ft_memcpy(sub, s + start, len);
 	sub[len] = '\0';
 	return (sub);

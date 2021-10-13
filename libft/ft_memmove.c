@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:45:09 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/28 13:45:11 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/13 14:26:58 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*pdst;
+	unsigned char		*pdst;
 	const unsigned char	*psrc;
 
 	pdst = (unsigned char *)dst;
