@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:51:31 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/28 14:00:59 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/13 15:14:16 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start > s_length)
-	{
 		return (ft_strdup(""));
-	}
 	if (start + len > s_length)
-	{
 		len = s_length - start;
-	}
 	if (!sub)
 		return (NULL);
 	ft_memcpy(sub, s + start, len);
