@@ -6,12 +6,15 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:49:11 by teiffe            #+#    #+#             */
-/*   Updated: 2021/10/13 14:31:48 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/19 14:51:39 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Included libft to be able to use the size_t data type and the
+ * ft_strlen and ft_memcpy functions */
 #include "libft.h"
 
+/* Do this one next */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;

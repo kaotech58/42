@@ -6,12 +6,15 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 10:12:45 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/09 10:45:27 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/19 13:29:33 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*  Included libft to be able to use size_t data type */
 #include "libft.h"
 
+/* This function copies src to dst for len amount of bytes
+ * it then returns the dst string */
 void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
 	unsigned char		*pdst;
@@ -25,7 +28,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	}
 	while (len--)
 	{
-		*(pdst++) = *(psrc++);
+		*pdst++ = *psrc++;
 	}
 	return (dst);
 }
