@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:49:11 by teiffe            #+#    #+#             */
-/*   Updated: 2021/10/19 14:51:39 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/21 11:47:33 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
  * ft_strlen and ft_memcpy functions */
 #include "libft.h"
 
-/* Do this one next */
+/*  This function uses the ft_strlen to determine the length
+ *  of the src pointer and then compares it to the size parameter
+ *  it then uses the ft_memcpy function to copy the src to the dst
+ *  depending on the condition. */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;

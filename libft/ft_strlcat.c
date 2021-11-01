@@ -6,10 +6,11 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:48:39 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/28 13:48:41 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/21 11:50:57 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Included libft to be able to use the size_t data type */
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

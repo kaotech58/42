@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:51:31 by teiffe            #+#    #+#             */
-/*   Updated: 2021/10/19 09:48:45 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/21 12:58:03 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,21 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i])
+	if (!str)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
-		i++;
+		return (NULL);
 	}
-	str[j] = 0;
+	while (s[j])
+	{
+		if (j >= start && i < len)
+		{
+			str[i] = s[j];
+			++i;
+		}
+		++j;
+	}
+	str[i] = 0;
 	return (str);
 }

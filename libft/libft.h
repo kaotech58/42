@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:06:28 by teiffe            #+#    #+#             */
-/*   Updated: 2021/09/28 13:59:23 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/10/21 12:01:41 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,6 @@
 # ifndef INT_MAX
 #  define INT_MAX 2147483647
 # endif
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 typedef struct s_split_next
 {

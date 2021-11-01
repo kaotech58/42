@@ -38,7 +38,7 @@ SRCS				= ft_putchar.c \
 
 OBJS_DIR			= objs/
 OBJS				= $(SRCS:.c=.o)
-OBJECTS_PREFIXED		= $(addprefix $(OBJS_DIR), $(OBJS))
+OBJECTS_PREFIXED	= $(addprefix $(OBJS_DIR), $(OBJS))
 DEPS				= libft.h
 
 NAME				= libft.a
