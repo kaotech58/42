@@ -1,6 +1,4 @@
-SRCS				= ft_putchar.c \
-					  ft_putchar_fd.c \
-					  ft_putnbr.c \
+SRCS				= ft_putchar_fd.c \
 					  ft_putnbr_fd.c \
 					  ft_atoi.c \
 					  ft_memcmp.c \

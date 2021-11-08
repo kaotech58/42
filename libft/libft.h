@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:06:28 by teiffe            #+#    #+#             */
-/*   Updated: 2021/10/21 12:01:41 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/11/08 13:20:49 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,9 @@
 #  define INT_MAX 2147483647
 # endif
 
-typedef struct s_split_next
-{
-	size_t	start;
-	size_t	length;
-}	t_spilt_next;
-
 int		ft_atoi(const char *nptr);
 
-void	ft_putchar(char c);
-
 void	ft_putchar_fd(char c, int fd);
-
-void	ft_putnbr(int n);
 
 void	ft_putnbr_fd(int n, int fd);
 

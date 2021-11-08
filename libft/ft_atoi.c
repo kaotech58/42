@@ -5,85 +5,56 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:43:39 by teiffe            #+#    #+#             */
-/*   Updated: 2021/11/01 15:21:53 by teiffe           ###   ########.fr       */
+/*   Created: 2021/09/28 13:38:45 by teiffe            #+#    #+#             */
+/*   Updated: 2021/09/28 13:54:02 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-/* This function checks for
- * valid input*/
-char	ft_isnumber(char c)
-{
-	if (c >= '0' && c <= '9')
-	{
-		return (c = 1);
-	}
-	return (c = 0);
-}
+static int	ft_isspace(int c);
+static void	remove_whitespaces(const char **nptr);
+static int	determine_sign(const char **nptr);
 
-/* If nptr is null return 0 */
-/* While nptr is blank iterate through nptr */
-/* If nptr is a negative update symbol variable */
-/* This function will iterate through all characters
- * of the input pointer and update the result variable
- * it gets the ASCII character of the corresponding digit
- * it then subtracts the code from '0' to get the numerical
- * value and multiplies result by 10 to shuffle digits
- * left to update running total */
 int	ft_atoi(const char *nptr)
 {
-	int	result;
-	int	symbol;
-	int	base;
+	int		sign;
+	long	nbr;
 
-	result = 0;
-	symbol = 1;
-	base = 1;
-	if (!nptr)
-	{
+	remove_whitespaces(&nptr);
+	sign = determine_sign(&nptr);
+	nbr = 0;
+	while (ft_isdigit(*nptr)
+		&& nbr >= INT_MIN && nbr <= INT_MAX)
+		nbr = nbr * 10 + (*(nptr++) - '0');
+	nbr *= sign;
+	if (nbr < INT_MIN)
 		return (0);
-	}
-	while (*nptr == ' ')
-	{
-		++nptr;
-	}
-	if (*nptr == '-' || *nptr == '+')
-	{
-		symbol = 1 - 2 * ++nptr == '-';
-	}
-	while (*nptr)
-	{
-		if (ft_isnumber(*nptr) == 0)
-		{
-			break ;
-		}
-		if (base > INT_MAX / 10
-			|| (base == INT_MAX / 10
-				&& *nptr - '0' > 7))
-		{
-			if (symbol == 1)
-			{
-				return (INT_MAX);
-			}
-			else
-			{
-				return (INT_MIN);
-			}
-		}
-		base = 10 * base + *nptr - '0';
-		++nptr;
-	}
-	return (base * symbol);
+	if (nbr > INT_MAX)
+		return (-1);
+	return (nbr);
 }
 
-int	main(void)
+static int	determine_sign(const char **nptr)
 {
-	char str[] = "-134";
+	int	sign;
 
-	int	val = ft_atoi(str);
-	printf("%d \n", val);
-	return (0);
+	sign = 1;
+	if (**nptr == '-')
+		sign = -1;
+	if (**nptr == '-' || **nptr == '+')
+		(*nptr)++;
+	return (sign);
+}
+
+static void	remove_whitespaces(const char **nptr)
+{
+	while (ft_isspace(**nptr))
+		(*nptr)++;
+}
+
+static int	ft_isspace(int c)
+{
+	return (c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r' || c == ' ');
 }
