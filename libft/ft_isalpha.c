@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:54:10 by teiffe            #+#    #+#             */
-/*   Updated: 2021/10/19 10:44:57 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:00:30 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_isupper(int c)
 	return (c >= 65 && c <= 90);
 }
 
-/* Thie function checks if c is a lower case
+/* This function checks if c is a lower case
  * letter and returns a 0 for false or a 1 for true */
 static int	ft_islower(int c)
 {

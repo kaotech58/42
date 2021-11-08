@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:06:28 by teiffe            #+#    #+#             */
-/*   Updated: 2021/11/08 13:20:49 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/11/08 15:12:04 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ void	*ft_memchr(const void *s, int c, size_t len);
 void	*ft_memset(void *s, int c, size_t len);
 
 void	*ft_memcpy(void *dst, const void *src, size_t len);
-
-void	*ft_memccpy(void *dst, const void *src, int c, size_t len);
 
 void	ft_bzero(void *s, size_t len);
 
