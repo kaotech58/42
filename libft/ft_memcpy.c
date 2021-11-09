@@ -28,7 +28,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	}
 	while (len--)
 	{
-		*pdst++ = *psrc++;
+		*(char *)pdst++ = *(char *)psrc++;
 	}
 	return (dst);
 }
