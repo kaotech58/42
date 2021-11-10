@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  Included libft to be able to use size_t data type */
+/*  Included libft to be able to use size_t data type
+ *  and to use NULL */
 #include "libft.h"
 
 /* This function copies src to dst for len amount of bytes
@@ -18,7 +19,7 @@
 void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
 	unsigned char		*pdst;
-	const unsigned char	*psrc;
+	unsigned const char	*psrc;
 
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
@@ -28,7 +29,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	}
 	while (len--)
 	{
-		*(char *)pdst++ = *(char *)psrc++;
+		*((char *)pdst++) = *((char *)psrc++);
 	}
 	return (dst);
 }
