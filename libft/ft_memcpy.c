@@ -18,18 +18,17 @@
  * it then returns the dst string */
 void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
-	unsigned char		*pdst;
-	unsigned const char	*psrc;
+	size_t	i;
+	char	*pdst;
+	char	*psrc;
 
-	pdst = (unsigned char *)dst;
-	psrc = (unsigned char *)src;
-	if (!dst || !src)
+	i = 0;
+	pdst = (char *)dst;
+	psrc = (char *)src;
+	while (i < len)
 	{
-		return (NULL);
-	}
-	while (len--)
-	{
-		*((char *)pdst++) = *((char *)psrc++);
+		pdst[i] = psrc[i];
+		++i;
 	}
 	return (dst);
 }
