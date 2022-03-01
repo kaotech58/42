@@ -6,7 +6,7 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 12:36:14 by teiffe            #+#    #+#             */
-/*   Updated: 2022/03/01 12:36:27 by teiffe           ###   ########.fr       */
+/*   Updated: 2022/03/01 12:52:09 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-/* Beginning at the index 'start' and finishing at maximum
- * size 'len', this function allocates and returns a 
- * substring from the given string */
-
 size_t	ft_strlen(const char *s)
 {
 	const char	*stringend = s;
@@ -52,11 +48,6 @@ size_t	ft_strlen(const char *s)
 	}
 	return (stringend - s);
 }
-
-/* This function takes an int as an argument and counts 
- * the length of the string up to (but not including) the 
- * null terminator. Then increments until the string is completed.
- * Then increments until the string is completed. */
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -75,18 +66,27 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/* Searches for and returns a pointer to the first 
- * occurrence of c in the string. If this character is
- * not found, return NULL. */
-
 char	*ft_strdup(const char *str)
 {
 	return (ft_substr(str, 0, ft_strlen(str)));
 }
 
-/* Allocates sufficient memory to hold the string (including
- * NULL terminator) and copies the old string to the new 
- * string and returns a pointer to the new address. */
+void	*ft_memcpy(void *dst, const void *src, size_t len)
+{
+	size_t	i;
+	char	*pdst;
+	char	*psrc;
+
+	i = 0;
+	pdst = (char *)dst;
+	psrc = (char *)src;
+	while (i < len)
+	{
+		pdst[i] = psrc[i];
+		++i;
+	}
+	return (dst);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -106,5 +106,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (join);
 }
 
-/* Allocates and returns a new string that is the result of
- * s1 (string 1) and s2 (string 2) combined. */
