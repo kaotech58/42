@@ -6,12 +6,11 @@
 /*   By: teiffe <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 10:12:45 by teiffe            #+#    #+#             */
-/*   Updated: 2021/10/19 13:29:33 by teiffe           ###   ########.fr       */
+/*   Updated: 2021/11/12 13:44:54 by teiffe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  Included libft to be able to use size_t data type
- *  and to use NULL */
+/*  Included libft to be able to use size_t data type */
 #include "libft.h"
 
 /* This function copies src to dst for len amount of bytes
